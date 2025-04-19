@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoc"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/custom_edittext"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/REGISTER"
+                android:textAlignment="center"
+                android:textColor="#0B0A0A"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/editTextDni"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/baseline_fingerprint_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="@string/dni"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background" />
+
+
+            <EditText
+                android:id="@+id/editTextNewUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/baseline_account_circle_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="@string/username"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background" />
+
+            <EditText
+                android:id="@+id/editTextNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/outline_lock_24"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cardview_dark_background" />
+
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#D7A8A8"
+                android:text="@string/register"
+                android:textSize="20sp"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/already_registered"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/lblLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dp"
+        android:text="@string/login_now"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name" translatable="false">myapp</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="login">Login</string>
+    <string name="dont_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
+    <string name="REGISTER">REGISTER</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="dni">ID number</string>
+    <string name="already_registered">Already registered?</string>
+    <string name="login_now">Login now</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="CONTINUE">CONTINUE</string>
+    <string name="LOGINWITHYOURUSERNAME">Login with your username</string>
+    <string name="registernow">Register now</string>
+    <string name="enteryourdetails">Enter your details</string>
+    <string name="name">Name</string>
+    <string name="age">age</string>
+    <string name="gender">gender</string>
+    <string name="weight">weight</string>
+    <string name="height">height</string>
+    <string name="infertility">Infertility:yes or no</string>
+    <string name="Familyhistoryofdysmenorrhea">Family History of dysmenorrhea: yes or no</string>
+    <string name="ageatmenarche">Age at menarche</string>
+    <string name="Nulliparity">Nulliparity: yes or no</string>
+    <string name="editinformation">Edit information</string>
+    <string name="addmenstrualcycle">Add Menstrual Cycle</string>
+    <string name="menstrualcycles">Menstrual Cycles:</string>
+    <string name="exit">Exit</string>
+    <string name="cycle">Cycle</string>
+    <string name="Addday">Add day</string>
+    <string name="Return">Return</string>
+    <string name="enterdetails">Enter your details</string>
+    <string name="dateofperiod">Date of your period</string>
+    <string name="aboutyou">About you</string>
+    <string name="painintensity">Pain Intensity</string>
+    <string name="heavymenstrualflow">Heavy Menstrual Flow</string>
+    <string name="mentalhealth">Mental Health</string>
+    <string name="stresslevel">Stress Level</string>
+    <string name="depression">Depression</string>
+    <string name="dailyroutine">Daily Routine</string>
+    <string name="diet">Diet</string>
+    <string name="alcohol">Alcohol Consumption</string>
+    <string name="exercise">Exercise</string>
+    <string name="smoking">Smoking</string>
+    <string name="treatments">Treatments</string>
+    <string name="oralcontraceptives">Oral contraceptives</string>
+    <string name="nonstreroideal">Nonstreroideal anti-inflammatory</string>
+    <string name="transcutaneouselectricalnerve">Transcutaneous elecrtical nerve</string>
+    <string name="heattherapy">Heat therapy</string>
+    <string name="acupressure">Acupressure</string>
+    <string name="acupuncture">Acupuncture</string>
+    <string name="herbalmedicine">Herbal Medicine</string>
+    <string name="save">Save</string>
+    <string name="fillthefileds">To continue, please fill in the following fields</string>
+    <string name="day">Day</string>
+    <string name="dninotfound">Error: DNI not found</string>
+    <string name="enterdni">"Please enter your DNI"</string>
+    <string name="Incorrectusername">Incorrect username,password or DNI</string>
+    <string name="datasaved">Data saved successfully</string>
+    <string name="datanotsaved">Error saving data</string>
+    <string name="notdatafound">No data found for DNI</string>
+    <string name="userexists">The user with this ID already exists</string>
+    <string name="userregistered">User successfully registered</string>
+    <string name="usererror">Registration error</string>
+
+
+
+
+
+
+</resources>

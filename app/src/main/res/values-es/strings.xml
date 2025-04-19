@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_back">¡Bienvenido de nuevo!</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="dont_account">¿No tienes una cuenta?</string>
+    <string name="register">Registrarse</string>
+    <string name="REGISTER">REGISTRARSE</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="dni">Número de identificación</string>
+    <string name="already_registered">¿Ya estás registrado?</string>
+    <string name="login_now">Iniciar sesión ahora</string>
+    <string name="LOGIN">INICIAR SESIÓN</string>
+    <string name="CONTINUE">CONTINUAR</string>
+    <string name="LOGINWITHYOURUSERNAME">Inicia sesión con tu nombre de usuario</string>
+    <string name="registernow">Regístrate ahora</string>
+    <string name="enteryourdetails">Introduce tus detalles</string>
+    <string name="name">Nombre</string>
+    <string name="age">Edad</string>
+    <string name="gender">Género</string>
+    <string name="weight">Peso</string>
+    <string name="height">Altura</string>
+    <string name="infertility">Infertilidad: sí o no</string>
+    <string name="Familyhistoryofdysmenorrhea">Historial familiar de dismenorrea: sí o no</string>
+    <string name="ageatmenarche">Edad en la menarquia</string>
+    <string name="Nulliparity">Nuliparidad: sí o no</string>
+    <string name="editinformation">Editar información</string>
+    <string name="addmenstrualcycle">Añadir ciclo menstrual</string>
+    <string name="menstrualcycles">Ciclos menstruales:</string>
+    <string name="exit">Salir</string>
+    <string name="cycle">Ciclo</string>
+    <string name="Addday">Añadir día</string>
+    <string name="Return">Regresar</string>
+    <string name="enterdetails">Introduce tus detalles</string>
+    <string name="dateofperiod">Fecha de tu periodo</string>
+    <string name="aboutyou">Acerca de ti</string>
+    <string name="painintensity">Intensidad del dolor</string>
+    <string name="heavymenstrualflow">Flujo menstrual abundante</string>
+    <string name="mentalhealth">Salud mental</string>
+    <string name="stresslevel">Nivel de estrés</string>
+    <string name="depression">Depresión</string>
+    <string name="dailyroutine">Rutina diaria</string>
+    <string name="diet">Dieta</string>
+    <string name="alcohol">Consumo de alcohol</string>
+    <string name="exercise">Ejercicio</string>
+    <string name="smoking">Tabaquismo</string>
+    <string name="treatments">Tratamientos</string>
+    <string name="oralcontraceptives">Anticonceptivos orales</string>
+    <string name="nonstreroideal">Antiinflamatorios no esteroideos</string>
+    <string name="transcutaneouselectricalnerve">Estimulación eléctrica transcutánea del nervio</string>
+    <string name="heattherapy">Terapia de calor</string>
+    <string name="acupressure">Acupresión</string>
+    <string name="acupuncture">Acupuntura</string>
+    <string name="herbalmedicine">Medicina herbal</string>
+    <string name="save">Guardar</string>
+    <string name="fillthefileds">Para continuar, por favor rellena los siguientes campos</string>
+    <string name="day">Dia</string>
+    <string name="dninotfound">Error: DNI no encontrado</string>
+    <string name="enterdni">Por favor ingrese su DNI</string>
+    <string name="Incorrectusername">Nombre de usuario, contraseña o DNI incorrectos</string>
+    <string name="datasaved">Datos guardados correctamente</string>
+    <string name="datanotsaved">Error al guardar los datos</string>
+    <string name="notdatafound">No se encontraron datos para el DNI</string>
+    <string name="userexists">El usuario con este DNI ya existe</string>
+    <string name="userregistered">Usuario registrado con éxito</string>
+    <string name="usererror">Error de registro</string>
+
+
+
+
+
+
+
+
+
+
+
+</resources>

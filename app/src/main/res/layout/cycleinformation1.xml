@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondob"
+    android:padding="16dp"
+    tools:context=".CycleinformationActivity">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Texto de instrucciones -->
+        <TextView
+            android:id="@+id/Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fillthefileds"
+            android:textAlignment="center"
+            android:textColor="#0B0A0A"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:background="@drawable/custom_edittext"
+            app:cardCornerRadius="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+
+
+
+                <!-- Campos de entrada -->
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enterdetails"
+                    android:textAlignment="center"
+                    android:textColor="#0B0A0A"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/perioddate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/dateofperiod"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+
+                <TextView
+                    android:id="@+id/aboutyou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/aboutyou"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/pink" />
+
+                <EditText
+                    android:id="@+id/painintensity"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/painintensity"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+
+                <EditText
+                    android:id="@+id/menstrualflow"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/heavymenstrualflow"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+
+                <TextView
+                    android:id="@+id/mentalhealth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/mentalhealth"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/pink" />
+
+                <EditText
+                    android:id="@+id/stress"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/stresslevel"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+
+                <EditText
+                    android:id="@+id/depression"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/depression"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+                <TextView
+                    android:id="@+id/dailyroutine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/dailyroutine"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/pink" />
+                <EditText
+                    android:id="@+id/diet"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/diet"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+
+                <EditText
+                    android:id="@+id/alcoholconsumption"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/alcohol"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+
+                <EditText
+                    android:id="@+id/exercise"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/exercise"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+
+                <EditText
+                    android:id="@+id/smoking"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/smoking"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+                <TextView
+                    android:id="@+id/treatments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/treatments"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/pink" />
+
+                <EditText
+                    android:id="@+id/oralcontraceptives"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/oralcontraceptives"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+                <EditText
+                    android:id="@+id/drugs"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/nonstreroideal"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+                <EditText
+                    android:id="@+id/transcutaneous"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/transcutaneouselectricalnerve"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+                <EditText
+                    android:id="@+id/heat"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/heattherapy"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+                <EditText
+                    android:id="@+id/acupressure"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/acupressure"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+                <EditText
+                    android:id="@+id/acupuncture"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/acupuncture"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+                <EditText
+                    android:id="@+id/herbalmedicine"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_edittext"
+                    android:drawableLeft="@drawable/baseline_play_arrow_24"
+                    android:drawablePadding="8dp"
+                    android:ems="10"
+                    android:hint="@string/herbalmedicine"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cardview_dark_background" />
+
+                <!-- Botón de continuar -->
+                <Button
+                    android:id="@+id/btnsave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="#D7A8A8"
+                    android:text="@string/save"
+                    android:textSize="20sp"
+                    app:cornerRadius="20dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

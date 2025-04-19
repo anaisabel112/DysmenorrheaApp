@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LOGIN" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.LOGIN" parent="Base.Theme.LOGIN" />
+    <!-- Estilo común para los botones -->
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:backgroundTint">#B95B5A</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+</resources>

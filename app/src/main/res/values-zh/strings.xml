@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_back">欢迎回来！</string>
+    <string name="login">登录</string>
+    <string name="dont_account">还没有账户？</string>
+    <string name="register">注册</string>
+    <string name="REGISTER">注册</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="dni">身份证号码</string>
+    <string name="already_registered">已经注册了吗？</string>
+    <string name="login_now">现在登录</string>
+    <string name="LOGIN">登录</string>
+    <string name="CONTINUE">继续</string>
+    <string name="LOGINWITHYOURUSERNAME">使用用户名登录</string>
+    <string name="registernow">立即注册</string>
+    <string name="enteryourdetails">请输入你的详细信息</string>
+    <string name="name">姓名</string>
+    <string name="age">年龄</string>
+    <string name="gender">性别</string>
+    <string name="weight">体重</string>
+    <string name="height">身高</string>
+    <string name="infertility">不育：是或否</string>
+    <string name="Familyhistoryofdysmenorrhea">痛经家族史：是或否</string>
+    <string name="ageatmenarche">初潮年龄</string>
+    <string name="Nulliparity">初产：是或否</string>
+    <string name="editinformation">编辑信息</string>
+    <string name="addmenstrualcycle">添加月经周期</string>
+    <string name="menstrualcycles">月经周期：</string>
+    <string name="exit">退出</string>
+    <string name="cycle">周期</string>
+    <string name="Addday">添加天数</string>
+    <string name="Return">返回</string>
+    <string name="enterdetails">请输入你的详细信息</string>
+    <string name="dateofperiod">你的月经日期</string>
+    <string name="aboutyou">关于你</string>
+    <string name="painintensity">疼痛强度</string>
+    <string name="heavymenstrualflow">月经量大</string>
+    <string name="mentalhealth">心理健康</string>
+    <string name="stresslevel">压力水平</string>
+    <string name="depression">抑郁症</string>
+    <string name="dailyroutine">日常生活</string>
+    <string name="diet">饮食</string>
+    <string name="alcohol">饮酒</string>
+    <string name="exercise">运动</string>
+    <string name="smoking">吸烟</string>
+    <string name="treatments">治疗方法</string>
+    <string name="oralcontraceptives">口服避孕药</string>
+    <string name="nonstreroideal">非类固醇抗炎药</string>
+    <string name="transcutaneouselectricalnerve">经皮电神经刺激</string>
+    <string name="heattherapy">热疗</string>
+    <string name="acupressure">指压</string>
+    <string name="acupuncture">针灸</string>
+    <string name="herbalmedicine">草药治疗</string>
+    <string name="save">保存</string>
+    <string name="fillthefileds">要继续，请填写以下字段</string>
+    <string name="day">天</string>
+    <string name="dninotfound">错误：DNI未找到</string>
+    <string name="enterdni">请输入您的DNI</string>
+    <string name="Incorrectusername">用户名、密码或DNI不正确</string>
+    <string name="datasaved">数据已成功保存</string>
+    <string name="datanotsaved">保存数据时出错</string>
+    <string name="notdatafound">未找到该DNI的数据</string>
+    <string name="userexists">此DNI的用户已存在</string>
+    <string name="userregistered">用户注册成功</string>
+    <string name="usererror">注册错误</string>
+
+
+
+
+
+
+
+
+
+
+</resources>

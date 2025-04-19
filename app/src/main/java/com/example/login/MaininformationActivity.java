@@ -1,0 +1,199 @@
+package com.example.login;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import org.json.JSONObject;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class MaininformationActivity extends AppCompatActivity {
+    // Declare UI components and variables
+    private EditText editName, editAge, editGender, editWeight, editHeight,
+            editInfertility, editFamilyHistory, editAgeAtMenarche, editNulliparity;
+    private Button btnContinue4;
+    private String dni;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.maininformation);
+
+        // Connect the UI elements to their respective fields in the layout
+        editName = findViewById(R.id.editName);
+        editAge = findViewById(R.id.editAge);
+        editGender = findViewById(R.id.editGender);
+        editWeight = findViewById(R.id.editWeight);
+        editHeight = findViewById(R.id.editHeight);
+        editInfertility = findViewById(R.id.editInfertility);
+        editFamilyHistory = findViewById(R.id.editFamilyHistory);
+        editAgeAtMenarche = findViewById(R.id.editAgeAtMenarche);
+        editNulliparity = findViewById(R.id.editNulliparity);
+        btnContinue4 = findViewById(R.id.btnContinue4);
+
+        // Get the 'dni' passed from the previous activity
+        dni = getIntent().getStringExtra("dni");
+
+        // Load any existing user data from the file
+        loadUserData();
+
+        // Set the action for the continue button
+        btnContinue4.setOnClickListener(v -> {
+            // Validate input fields before saving
+            if (validateFields()) {
+                saveUserData(); // Save the data if all fields are valid
+                // Navigate to the next activity
+                Intent intent = new Intent(MaininformationActivity.this, MainButtonsActivity.class);
+                intent.putExtra("dni", dni);
+                startActivity(intent);
+                finish();
+            } else {
+                // Show a message if any field is empty
+                Toast.makeText(MaininformationActivity.this, getString(R.string.fillthefileds), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    /**
+     * Validates the input fields to ensure that they are not empty.
+     * @return true if all fields are filled, false otherwise
+     */
+    private boolean validateFields() {
+        // Check if any input field is empty
+        return !editName.getText().toString().trim().isEmpty() &&
+                !editAge.getText().toString().trim().isEmpty() &&
+                !editGender.getText().toString().trim().isEmpty() &&
+                !editWeight.getText().toString().trim().isEmpty() &&
+                !editHeight.getText().toString().trim().isEmpty() &&
+                !editInfertility.getText().toString().trim().isEmpty() &&
+                !editFamilyHistory.getText().toString().trim().isEmpty() &&
+                !editAgeAtMenarche.getText().toString().trim().isEmpty() &&
+                !editNulliparity.getText().toString().trim().isEmpty();
+    }
+
+    /**
+     * Saves the user data to a JSON file.
+     * It either creates a new file or updates an existing one.
+     */
+    private void saveUserData() {
+        try {
+            // Create or open the JSON file using the user's DNI as the filename
+            File file = new File(getFilesDir(), dni + ".json");
+            // Read the existing data if the file exists, otherwise create a new JSON object
+            JSONObject userJson = file.exists() ? new JSONObject(readFile(file)) : new JSONObject();
+
+            // Add the user data to the JSON object
+            userJson.put("name", editName.getText().toString().trim());
+            userJson.put("age", editAge.getText().toString().trim());
+            userJson.put("gender", editGender.getText().toString().trim());
+            userJson.put("weight", editWeight.getText().toString().trim());
+            userJson.put("height", editHeight.getText().toString().trim());
+            userJson.put("infertility", editInfertility.getText().toString().trim());
+            userJson.put("family_history", editFamilyHistory.getText().toString().trim());
+            userJson.put("age_at_menarche", editAgeAtMenarche.getText().toString().trim());
+            userJson.put("nulliparity", editNulliparity.getText().toString().trim());
+
+            // Remove incorrect or outdated field names
+            userJson.remove("family history");
+            userJson.remove("age at menarche");
+
+            // Write the updated JSON data to the file
+            writeFile(file, userJson.toString());
+
+            // Show a success message and log the saved data
+            Toast.makeText(this, getString(R.string.datasaved), Toast.LENGTH_SHORT).show();
+            Log.d("MaininformationActivity", "User data saved: " + userJson.toString());
+        } catch (Exception e) {
+            // Handle any exceptions during the save process
+            Log.e("MaininformationActivity", "Error saving data", e);
+            Toast.makeText(this, getString(R.string.datanotsaved), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * Loads user data from the JSON file and populates the input fields.
+     * If no data is found, a message is shown.
+     */
+    private void loadUserData() {
+        if (dni == null || dni.isEmpty()) {
+            // Show an error message if the DNI is invalid
+            Toast.makeText(this, getString(R.string.dninotfound), Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Locate the user's JSON file
+        File file = new File(getFilesDir(), dni + ".json");
+
+        // If the file exists, load the data into the fields
+        if (file.exists()) {
+            try {
+                JSONObject userJson = new JSONObject(readFile(file));
+
+                // Set the EditText fields with the loaded data
+                editName.setText(userJson.optString("name", ""));
+                editAge.setText(userJson.optString("age", ""));
+                editGender.setText(userJson.optString("gender", ""));
+                editWeight.setText(userJson.optString("weight", ""));
+                editHeight.setText(userJson.optString("height", ""));
+                editInfertility.setText(userJson.optString("infertility", ""));
+                editFamilyHistory.setText(userJson.optString("family_history", ""));
+                editAgeAtMenarche.setText(userJson.optString("age_at_menarche", ""));
+                editNulliparity.setText(userJson.optString("nulliparity", ""));
+
+                Log.d("MaininformationActivity", "User data loaded successfully for DNI: " + dni);
+            } catch (Exception e) {
+                // Handle any errors during the load process
+                Log.e("MaininformationActivity", "Error loading user data", e);
+                Toast.makeText(this, getString(R.string.datanotsaved), Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            // Show a message if no data is found for the user
+            Toast.makeText(this, getString(R.string.notdatafound)+ dni, Toast.LENGTH_SHORT).show();
+            Log.d("MaininformationActivity", "No JSON file found for DNI: " + dni);
+        }
+    }
+
+    /**
+     * Reads the content of a file and returns it as a String.
+     * @param file the file to read from
+     * @return the file content as a String
+     */
+    private String readFile(File file) {
+        StringBuilder jsonString = new StringBuilder();
+        try (Scanner scanner = new Scanner(new FileReader(file))) {
+            while (scanner.hasNextLine()) {
+                jsonString.append(scanner.nextLine());
+            }
+        } catch (IOException e) {
+            // Handle any errors while reading the file
+            Log.e("MaininformationActivity", "Error reading file", e);
+        }
+        return jsonString.toString();
+    }
+
+    /**
+     * Writes data to a file.
+     * @param file the file to write to
+     * @param data the data to write to the file
+     */
+    private void writeFile(File file, String data) {
+        try (FileWriter writer = new FileWriter(file)) {
+            writer.write(data);
+            writer.flush();
+        } catch (IOException e) {
+            // Handle any errors while writing to the file
+            Log.e("MaininformationActivity", "Error writing to file", e);
+        }
+    }
+}
+
