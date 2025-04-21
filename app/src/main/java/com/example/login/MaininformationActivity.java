@@ -1,6 +1,7 @@
 package com.example.login;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Scanner;
 
 public class MaininformationActivity extends AppCompatActivity {
@@ -109,6 +111,33 @@ public class MaininformationActivity extends AppCompatActivity {
 
             // Write the updated JSON data to the file
             writeFile(file, userJson.toString());
+
+            //exports the JSON document to Downloads of the phone
+            FileUtils.exportJsonToDownloads(file, dni + ".json");
+            // It also saves the information in the SAF document if exists
+            //Write to SAF (Storage Access Framework) location if previously saved URI is available
+            try {
+                String uriString = getSharedPreferences("app_prefs", MODE_PRIVATE)// it retrieves the URI that contains the location of the document where the data is going to be saved
+                        .getString("user_file_uri", null);
+
+                if (uriString != null) {
+                    Uri uri = Uri.parse(uriString);
+                    try (OutputStream outputStream = getContentResolver().openOutputStream(uri)) {
+                        if (outputStream != null) {
+                            outputStream.write(userJson.toString().getBytes());
+                            outputStream.flush();
+                            Log.d("MaininformationActivity", "Data also saves in SAF" + uri.toString());
+                        }
+                    }
+                } else {
+                    Log.d("MaininformationActivity", "There is no URI saved for SAF.");
+                }
+            } catch (Exception e) {
+                Log.e("MaininformationActivity", "Error saving SAF", e);
+            }
+
+
+
 
             // Show a success message and log the saved data
             Toast.makeText(this, getString(R.string.datasaved), Toast.LENGTH_SHORT).show();

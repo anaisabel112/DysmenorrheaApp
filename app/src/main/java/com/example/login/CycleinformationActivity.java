@@ -1,5 +1,6 @@
 package com.example.login;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.OutputStream;
 import java.util.Scanner;
 
 public class CycleinformationActivity extends AppCompatActivity {
@@ -182,13 +184,38 @@ public class CycleinformationActivity extends AppCompatActivity {
             }
 
             userJson.put("cycles", cyclesArray);
+
+            // Saves the intern file
             try (FileWriter writer = new FileWriter(file)) {
                 writer.write(userJson.toString());
+                FileUtils.exportJsonToDownloads(file, dni + ".json");
+            }
+
+            // Saves the SAF file if exists
+            try {
+                String uriString = getSharedPreferences("app_prefs", MODE_PRIVATE)
+                        .getString("user_file_uri", null);// read the previously saved uRI string from shared preferences, the uRI points to the file lcoation chosen by the user
+
+                if (uriString != null) {
+                    Uri uri = Uri.parse(uriString);// if a URI string was found, its parsed into an actual Uri object so we can write to it
+                    try (OutputStream outputStream = getContentResolver().openOutputStream(uri)) {// is how Android app writes SAF chosen files
+                        if (outputStream != null) {
+                            outputStream.write(userJson.toString().getBytes());// if the stream opened succesfully it converts the JSON data to a byte array, then writes it to the file
+                            outputStream.flush();// makes everything is pushed to disk
+                            Log.d("CycleinformationActivity", "Datos también guardados en SAF: " + uri.toString());
+                        }
+                    }
+                } else {
+                    Log.d("CycleinformationActivity", "No hay URI guardada para SAF.");
+                }
+            } catch (Exception e) {
+                Log.e("CycleinformationActivity", "Error guardando en SAF", e);
             }
         } catch (Exception e) {
             Log.e("CycleinformationActivity", "Error saving cycle data", e);
         }
     }
+
 
     private void updateDayData(JSONObject day) throws JSONException {
         day.put("periodDate", periodDate.getText().toString().trim());

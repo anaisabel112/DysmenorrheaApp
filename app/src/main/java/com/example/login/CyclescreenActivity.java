@@ -155,7 +155,7 @@ public class CyclescreenActivity extends AppCompatActivity {
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
         );
-        params.setMargins(0, 20, 0, 0); // margen superior como los demás
+        params.setMargins(0, 20, 0, 0); // top margin like the other
         dayButton.setLayoutParams(params);
         dayButton.setOnClickListener(v -> openDayDetails(dayNumber, cycleNumber));
         layoutButtons.addView(dayButton);

@@ -189,12 +189,12 @@ public class MainButtonsActivity extends AppCompatActivity {
         // Margins (same as the other buttons)
 
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) cycleButton.getLayoutParams();
-        params.setMargins(0, 20, 0, 0); // margen superior de 20dp
+        params.setMargins(0, 20, 0, 0); // 20dp top margin
         cycleButton.setLayoutParams(params);
 
         // Background color
 
-        cycleButton.setBackgroundTintList(getResources().getColorStateList(R.color.pink, getTheme())); // usa colores definidos
+        cycleButton.setBackgroundTintList(getResources().getColorStateList(R.color.button_color, getTheme())); // usa colores definidos
 
         // Text size
 
@@ -205,7 +205,7 @@ public class MainButtonsActivity extends AppCompatActivity {
         // Rounded corners: if you use `cornerRadius`, make sure you're using MaterialButton or use a drawable
         // If you're using regular buttons, you can use an XML drawable as the background
 
-        cycleButton.setBackgroundResource(R.drawable.custom_edittext); // Si tienes un drawable personalizado
+        cycleButton.setBackgroundResource(R.drawable.custom_edittext); // If you have a custom drawable
 
         // Button action
         cycleButton.setOnClickListener(v -> {
