@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        >
 
         <!-- Texto de instrucciones -->
         <TextView
@@ -33,17 +34,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
-            android:background="@drawable/custom_edittext"
-            app:cardCornerRadius="30dp">
+            app:cardCornerRadius="30dp"
+            android:background="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:orientation="vertical"
-                android:padding="24dp">
-
-
+                android:padding="24dp"
+                android:background="@color/white">
 
 
                 <!-- Campos de entrada -->
@@ -79,6 +79,7 @@
                     android:text="@string/aboutyou"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
@@ -120,6 +121,7 @@
                     android:text="@string/mentalhealth"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
@@ -152,6 +154,7 @@
                     android:hint="@string/depression"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
                 <TextView
                     android:id="@+id/dailyroutine"
                     android:layout_width="match_parent"
@@ -160,12 +163,14 @@
                     android:text="@string/dailyroutine"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:background="@color/pink" />
+
                 <EditText
                     android:id="@+id/diet"
                     android:layout_width="match_parent"
@@ -217,6 +222,7 @@
                     android:hint="@string/smoking"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
                 <TextView
                     android:id="@+id/treatments"
                     android:layout_width="match_parent"
@@ -225,6 +231,7 @@
                     android:text="@string/treatments"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
@@ -244,6 +251,7 @@
                     android:hint="@string/oralcontraceptives"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
                 <EditText
                     android:id="@+id/drugs"
                     android:layout_width="match_parent"
@@ -256,6 +264,7 @@
                     android:hint="@string/nonstreroideal"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
                 <EditText
                     android:id="@+id/transcutaneous"
                     android:layout_width="match_parent"
@@ -268,6 +277,7 @@
                     android:hint="@string/transcutaneouselectricalnerve"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
                 <EditText
                     android:id="@+id/heat"
                     android:layout_width="match_parent"
@@ -280,6 +290,7 @@
                     android:hint="@string/heattherapy"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
                 <EditText
                     android:id="@+id/acupressure"
                     android:layout_width="match_parent"
@@ -292,6 +303,7 @@
                     android:hint="@string/acupressure"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
                 <EditText
                     android:id="@+id/acupuncture"
                     android:layout_width="match_parent"
@@ -304,6 +316,7 @@
                     android:hint="@string/acupuncture"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
                 <EditText
                     android:id="@+id/herbalmedicine"
                     android:layout_width="match_parent"

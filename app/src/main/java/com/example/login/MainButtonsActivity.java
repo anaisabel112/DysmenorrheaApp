@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -28,6 +29,7 @@ public class MainButtonsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);// Force light mode, for color problem
         setContentView(R.layout.mainbuttons);// sets the layout MainButtons.xml
         //you connect the XML components to Java so you can work with them
         Button btnAddMenstrualCycle = findViewById(R.id.btnAddMenstrualCycle);

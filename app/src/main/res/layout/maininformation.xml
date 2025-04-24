@@ -33,16 +33,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
-            android:background="@drawable/custom_edittext"
             app:cardCornerRadius="30dp"
-            app:cardElevation="20dp">
+            app:cardElevation="20dp"
+            android:background="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:orientation="vertical"
-                android:padding="24dp">
+                android:padding="24dp"
+                android:background="@color/white">
 
                 <!-- Título de la pantalla -->
                 <TextView

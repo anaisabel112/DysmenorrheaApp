@@ -25,7 +25,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:padding="24dp"
+            android:background="@color/white">
 
             <!-- Texto adicional: Log in with your username -->
 

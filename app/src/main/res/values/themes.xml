@@ -14,5 +14,7 @@
         <item name="android:backgroundTint">#B95B5A</item>
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:textColor">#FFFFFF</item>
+
+
     </style>
 </resources>

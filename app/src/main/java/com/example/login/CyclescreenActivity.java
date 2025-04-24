@@ -9,6 +9,7 @@ import android.widget.LinearLayout;//UI component
 import android.widget.TextView;//UI component
 
 import androidx.appcompat.app.AppCompatActivity;//supports newer Android feautures while being back-ward-compatible
+import androidx.appcompat.app.AppCompatDelegate;
 
 import org.json.JSONArray;//Use arrays with json format
 import org.json.JSONObject;//manage objects with josn
@@ -26,6 +27,7 @@ public class CyclescreenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);// Force light mode, for color problem
         Log.d("Cyclescreen", "onCreate executed");
         setContentView(R.layout.cyclescreen);// initializes the creen layout
 

@@ -11,6 +11,7 @@ import android.widget.TextView;//UI components
 import android.widget.Toast;////UI components->shows quick pop up message to the user
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import org.json.JSONObject;
 
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);// Force light mode, for color problem
         setContentView(R.layout.login);// sets the layout login.xml
         //you connect the XML components to Java so you can work with them
         user = findViewById(R.id.txtusername);

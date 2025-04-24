@@ -23,7 +23,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:padding="24dp"
+            android:background="@color/white">
 
             <TextView
                 android:id="@+id/textView"
@@ -33,7 +34,8 @@
                 android:textAlignment="center"
                 android:textColor="#0B0A0A"
                 android:textSize="34sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:background="@color/white"/>
             <EditText
                 android:id="@+id/editTextDni"
                 android:layout_width="match_parent"
@@ -60,7 +62,8 @@
                 android:hint="@string/username"
                 android:inputType="text"
                 android:textColor="@color/black"
-                android:textColorHint="@color/cardview_dark_background" />
+                android:textColorHint="@color/cardview_dark_background"
+                />
 
             <EditText
                 android:id="@+id/editTextNewPassword"
