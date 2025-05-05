@@ -58,6 +58,14 @@
                     android:textSize="34sp"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/dateofperiod"
+                    android:textColor="@color/black"
+                     />
+
                 <EditText
                     android:id="@+id/perioddate"
                     android:layout_width="match_parent"
@@ -67,7 +75,6 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/dateofperiod"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
 
@@ -87,6 +94,14 @@
                     android:layout_marginBottom="5dp"
                     android:background="@color/pink" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/painintensity"
+                    android:textColor="@color/black"
+                    />
+
                 <EditText
                     android:id="@+id/painintensity"
                     android:layout_width="match_parent"
@@ -96,9 +111,16 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/painintensity"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/heavymenstrualflow"
+                    android:textColor="@color/black"
+                    />
 
                 <EditText
                     android:id="@+id/menstrualflow"
@@ -109,18 +131,18 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/heavymenstrualflow"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
 
                 <TextView
-                    android:id="@+id/mentalhealth"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:text="@string/mentalhealth"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/cardview_dark_background" />
+                    />
+
+
 
                 <View
                     android:layout_width="match_parent"
@@ -128,6 +150,13 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:background="@color/pink" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/stresslevel"
+                    android:textColor="@color/black"
+                    />
 
                 <EditText
                     android:id="@+id/stress"
@@ -138,9 +167,16 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/stresslevel"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/depression"
+                    android:textColor="@color/black"
+                    />
 
                 <EditText
                     android:id="@+id/depression"
@@ -151,7 +187,7 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/depression"
+
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
 
@@ -171,6 +207,14 @@
                     android:layout_marginBottom="5dp"
                     android:background="@color/pink" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/diet"
+                    android:textColor="@color/black"
+                    />
+
                 <EditText
                     android:id="@+id/diet"
                     android:layout_width="match_parent"
@@ -180,9 +224,16 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/diet"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/alcohol"
+                    android:textColor="@color/black"
+                    />
 
                 <EditText
                     android:id="@+id/alcoholconsumption"
@@ -193,9 +244,16 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/alcohol"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/exercise"
+                    android:textColor="@color/black"
+                    />
 
                 <EditText
                     android:id="@+id/exercise"
@@ -206,9 +264,15 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/exercise"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/smoking"
+                    android:textColor="@color/black"
+                    />
 
                 <EditText
                     android:id="@+id/smoking"
@@ -219,7 +283,6 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/smoking"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
 
@@ -239,6 +302,14 @@
                     android:layout_marginBottom="5dp"
                     android:background="@color/pink" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/oralcontraceptives"
+                    android:textColor="@color/black"
+                    />
+
                 <EditText
                     android:id="@+id/oralcontraceptives"
                     android:layout_width="match_parent"
@@ -248,9 +319,16 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/oralcontraceptives"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/nonstreroideal"
+                    android:textColor="@color/black"
+                    />
 
                 <EditText
                     android:id="@+id/drugs"
@@ -261,9 +339,16 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/nonstreroideal"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/transcutaneouselectricalnerve"
+                    android:textColor="@color/black"
+                    />
 
                 <EditText
                     android:id="@+id/transcutaneous"
@@ -274,9 +359,15 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/transcutaneouselectricalnerve"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/heattherapy"
+                    android:textColor="@color/black"
+                    />
 
                 <EditText
                     android:id="@+id/heat"
@@ -287,9 +378,16 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/heattherapy"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/acupressure"
+                    android:textColor="@color/black"
+                    />
 
                 <EditText
                     android:id="@+id/acupressure"
@@ -300,22 +398,16 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/acupressure"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
 
-                <EditText
-                    android:id="@+id/acupuncture"
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/custom_edittext"
-                    android:drawableLeft="@drawable/baseline_play_arrow_24"
-                    android:drawablePadding="8dp"
-                    android:ems="10"
-                    android:hint="@string/acupuncture"
+                    android:text="@string/herbalmedicine"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/cardview_dark_background" />
+                    />
 
                 <EditText
                     android:id="@+id/herbalmedicine"
@@ -326,7 +418,6 @@
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
                     android:ems="10"
-                    android:hint="@string/herbalmedicine"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
 

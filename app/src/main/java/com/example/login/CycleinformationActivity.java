@@ -47,7 +47,6 @@ public class CycleinformationActivity extends AppCompatActivity {
         transcutaneous = findViewById(R.id.transcutaneous);
         heat = findViewById(R.id.heat);
         acupressure = findViewById(R.id.acupressure);
-        acupuncture = findViewById(R.id.acupuncture);
         herbalMedicine = findViewById(R.id.herbalmedicine);
         btnSave = findViewById(R.id.btnsave);
 
@@ -87,7 +86,6 @@ public class CycleinformationActivity extends AppCompatActivity {
                 !transcutaneous.getText().toString().trim().isEmpty() &&
                 !heat.getText().toString().trim().isEmpty() &&
                 !acupressure.getText().toString().trim().isEmpty() &&
-                !acupuncture.getText().toString().trim().isEmpty() &&
                 !herbalMedicine.getText().toString().trim().isEmpty();
     }
 
@@ -126,7 +124,6 @@ public class CycleinformationActivity extends AppCompatActivity {
                             transcutaneous.setText(day.optString("transcutaneous", ""));
                             heat.setText(day.optString("heat", ""));
                             acupressure.setText(day.optString("acupressure", ""));
-                            acupuncture.setText(day.optString("acupuncture", ""));
                             herbalMedicine.setText(day.optString("herbalMedicine", ""));
                             return;
                         }
@@ -234,7 +231,6 @@ public class CycleinformationActivity extends AppCompatActivity {
         day.put("transcutaneous", transcutaneous.getText().toString().trim());
         day.put("heat", heat.getText().toString().trim());
         day.put("acupressure", acupressure.getText().toString().trim());
-        day.put("acupuncture", acupuncture.getText().toString().trim());
         day.put("herbalMedicine", herbalMedicine.getText().toString().trim());
     }
 }
