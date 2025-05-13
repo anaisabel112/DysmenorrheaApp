@@ -20,10 +20,10 @@
     <string name="gender">Gender</string>
     <string name="weight">Weight</string>
     <string name="height">Height</string>
-    <string name="infertility">Infertility:yes or no</string>
-    <string name="Familyhistoryofdysmenorrhea">Family History of dysmenorrhea: yes or no</string>
+    <string name="infertility">Infertility</string>
+    <string name="Familyhistoryofdysmenorrhea">Family History of dysmenorrhea</string>
     <string name="ageatmenarche">Age at menarche</string>
-    <string name="Nulliparity">Nulliparity: yes or no</string>
+    <string name="Nulliparity">Nulliparity</string>
     <string name="editinformation">Edit information</string>
     <string name="addmenstrualcycle">Add Menstrual Cycle</string>
     <string name="menstrualcycles">Menstrual Cycles:</string>
@@ -47,7 +47,7 @@
     <string name="treatments">Treatments</string>
     <string name="oralcontraceptives">Oral contraceptives</string>
     <string name="nonstreroideal">Nonstreroideal anti-inflammatory</string>
-    <string name="transcutaneouselectricalnerve">Transcutaneous elecrtical nerve</string>
+    <string name="transcutaneouselectricalnerve">Transcutaneous electrical nerve</string>
     <string name="heattherapy">Heat therapy</string>
     <string name="acupressure">Acupressure</string>
     <string name="acupuncture">Acupuncture</string>
@@ -64,6 +64,9 @@
     <string name="userexists">The user with this ID already exists</string>
     <string name="userregistered">User successfully registered</string>
     <string name="usererror">Registration error</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+
 
 
 

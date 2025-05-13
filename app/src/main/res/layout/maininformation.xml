@@ -90,6 +90,7 @@
                     android:background="@drawable/custom_edittext"
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
+                    android:inputType="number"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
 
@@ -131,6 +132,7 @@
                     android:background="@drawable/custom_edittext"
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
+                    android:inputType="number"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
 
@@ -149,6 +151,7 @@
                     android:background="@drawable/custom_edittext"
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
+                    android:inputType="number"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
 
@@ -160,15 +163,23 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="4dp"/>
 
-                <EditText
-                    android:id="@+id/editInfertility"
+                <RadioGroup
+                    android:id="@+id/radioGroupInfertility"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/custom_edittext"
-                    android:drawableLeft="@drawable/baseline_play_arrow_24"
-                    android:drawablePadding="8dp"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/cardview_dark_background" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/radioInfertilityYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Yes" />
+                    <RadioButton
+                        android:id="@+id/radioInfertilityNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/No" />
+                </RadioGroup>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -177,15 +188,23 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="4dp"/>
 
-                <EditText
-                    android:id="@+id/editFamilyHistory"
+                <RadioGroup
+                    android:id="@+id/radioGroupFamilyHistory"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/custom_edittext"
-                    android:drawableLeft="@drawable/baseline_play_arrow_24"
-                    android:drawablePadding="8dp"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/cardview_dark_background" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/radioFamilyHistoryYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Yes" />
+                    <RadioButton
+                        android:id="@+id/radioFamilyHistoryNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/No" />
+                </RadioGroup>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -201,6 +220,7 @@
                     android:background="@drawable/custom_edittext"
                     android:drawableLeft="@drawable/baseline_play_arrow_24"
                     android:drawablePadding="8dp"
+                    android:inputType="number"
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
 
@@ -212,19 +232,24 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="4dp"/>
 
-                <EditText
-                    android:id="@+id/editNulliparity"
+                <RadioGroup
+                    android:id="@+id/radioGroupNulliparity"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/custom_edittext"
-                    android:drawableLeft="@drawable/baseline_play_arrow_24"
-                    android:drawablePadding="8dp"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/cardview_dark_background" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/radioNulliparityYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Yes" />
+                    <RadioButton
+                        android:id="@+id/radioNulliparityNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/No" />
+                </RadioGroup>
 
-                <!-- Repite lo mismo para los siguientes: Height, Infertility, Family History, Age at Menarche, Nulliparity -->
 
-                <!-- Botón -->
                 <Button
                     android:id="@+id/btnContinue4"
                     android:layout_width="match_parent"

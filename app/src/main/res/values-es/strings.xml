@@ -20,10 +20,10 @@
     <string name="gender">Género</string>
     <string name="weight">Peso</string>
     <string name="height">Altura</string>
-    <string name="infertility">Infertilidad: sí o no</string>
-    <string name="Familyhistoryofdysmenorrhea">Historial familiar de dismenorrea: sí o no</string>
+    <string name="infertility">Infertilidad</string>
+    <string name="Familyhistoryofdysmenorrhea">Historial familiar de dismenorrea</string>
     <string name="ageatmenarche">Edad en la menarquia</string>
-    <string name="Nulliparity">Nuliparidad: sí o no</string>
+    <string name="Nulliparity">Nuliparidad</string>
     <string name="editinformation">Editar información</string>
     <string name="addmenstrualcycle">Añadir ciclo menstrual</string>
     <string name="menstrualcycles">Ciclos menstruales:</string>
@@ -64,6 +64,8 @@
     <string name="userexists">El usuario con este DNI ya existe</string>
     <string name="userregistered">Usuario registrado con éxito</string>
     <string name="usererror">Error de registro</string>
+    <string name="Yes">Si</string>
+    <string name="No">No</string>
 
 
 

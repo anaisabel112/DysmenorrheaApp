@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,39 +24,61 @@ import java.util.Scanner;
 
 public class MaininformationActivity extends AppCompatActivity {
     // Declare UI components and variables
-    private EditText editName, editAge, editGender, editWeight, editHeight,
-            editInfertility, editFamilyHistory, editAgeAtMenarche, editNulliparity;
+    private EditText editName, editAge, editGender, editWeight, editHeight,editAgeAtMenarche;
+
+    private RadioGroup radioGroupInfertility, radioGroupFamilyHistory, radioGroupNulliparity;
+
+
     private Button btnContinue4;
     private String dni;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("MaininformationActivity", "onCreate called");
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);// Force light mode, for color problem
         setContentView(R.layout.maininformation);
 
         // Connect the UI elements to their respective fields in the layout
         editName = findViewById(R.id.editName);
+        if (editName == null) {
+            Log.e("MaininformationActivity", "editTextName is null");
+        }
         editAge = findViewById(R.id.editAge);
+        if (editAge == null) {
+            Log.e("MaininformationActivity", "editTextAge is null");
+        }
         editGender = findViewById(R.id.editGender);
+        if (editGender == null) {
+            Log.e("MaininformationActivity", "editGender is null");
+        }
         editWeight = findViewById(R.id.editWeight);
+        if (editWeight == null) {
+            Log.e("MaininformationActivity", "editWeight is null");
+        }
         editHeight = findViewById(R.id.editHeight);
-        editInfertility = findViewById(R.id.editInfertility);
-        editFamilyHistory = findViewById(R.id.editFamilyHistory);
+        if (editHeight == null) {
+            Log.e("MaininformationActivity", "editTHeight is null");
+        }
+        radioGroupInfertility = findViewById(R.id.radioGroupInfertility);
+        radioGroupFamilyHistory = findViewById(R.id.radioGroupFamilyHistory);
         editAgeAtMenarche = findViewById(R.id.editAgeAtMenarche);
-        editNulliparity = findViewById(R.id.editNulliparity);
+        radioGroupNulliparity = findViewById(R.id.radioGroupNulliparity);
         btnContinue4 = findViewById(R.id.btnContinue4);
 
         // Get the 'dni' passed from the previous activity
         dni = getIntent().getStringExtra("dni");
+
 
         // Load any existing user data from the file
         loadUserData();
 
         // Set the action for the continue button
         btnContinue4.setOnClickListener(v -> {
+
             // Validate input fields before saving
             if (validateFields()) {
+
                 saveUserData(); // Save the data if all fields are valid
                 // Navigate to the next activity
                 Intent intent = new Intent(MaininformationActivity.this, MainButtonsActivity.class);
@@ -79,10 +103,10 @@ public class MaininformationActivity extends AppCompatActivity {
                 !editGender.getText().toString().trim().isEmpty() &&
                 !editWeight.getText().toString().trim().isEmpty() &&
                 !editHeight.getText().toString().trim().isEmpty() &&
-                !editInfertility.getText().toString().trim().isEmpty() &&
-                !editFamilyHistory.getText().toString().trim().isEmpty() &&
+                radioGroupInfertility.getCheckedRadioButtonId() != -1 &&
+                radioGroupFamilyHistory.getCheckedRadioButtonId() != -1 &&
                 !editAgeAtMenarche.getText().toString().trim().isEmpty() &&
-                !editNulliparity.getText().toString().trim().isEmpty();
+                radioGroupNulliparity.getCheckedRadioButtonId() != -1;
     }
 
     /**
@@ -95,17 +119,19 @@ public class MaininformationActivity extends AppCompatActivity {
             File file = new File(getFilesDir(), dni + ".json");
             // Read the existing data if the file exists, otherwise create a new JSON object
             JSONObject userJson = file.exists() ? new JSONObject(readFile(file)) : new JSONObject();
-
+            String infertility = ((RadioButton) findViewById(radioGroupInfertility.getCheckedRadioButtonId())).getText().toString();
+            String familyHistory = ((RadioButton) findViewById(radioGroupFamilyHistory.getCheckedRadioButtonId())).getText().toString();
+            String nulliparity = ((RadioButton) findViewById(radioGroupNulliparity.getCheckedRadioButtonId())).getText().toString();
             // Add the user data to the JSON object
             userJson.put("name", editName.getText().toString().trim());
             userJson.put("age", editAge.getText().toString().trim());
             userJson.put("gender", editGender.getText().toString().trim());
             userJson.put("weight", editWeight.getText().toString().trim());
             userJson.put("height", editHeight.getText().toString().trim());
-            userJson.put("infertility", editInfertility.getText().toString().trim());
-            userJson.put("family_history", editFamilyHistory.getText().toString().trim());
+            userJson.put("infertility", infertility);
+            userJson.put("family_history", familyHistory);
             userJson.put("age_at_menarche", editAgeAtMenarche.getText().toString().trim());
-            userJson.put("nulliparity", editNulliparity.getText().toString().trim());
+            userJson.put("nulliparity", nulliparity);
 
             // Remove incorrect or outdated field names
             userJson.remove("family history");
@@ -157,6 +183,7 @@ public class MaininformationActivity extends AppCompatActivity {
      */
     private void loadUserData() {
         if (dni == null || dni.isEmpty()) {
+
             // Show an error message if the DNI is invalid
             Toast.makeText(this, getString(R.string.dninotfound), Toast.LENGTH_SHORT).show();
             return;
@@ -169,6 +196,8 @@ public class MaininformationActivity extends AppCompatActivity {
         if (file.exists()) {
             try {
                 JSONObject userJson = new JSONObject(readFile(file));
+                Log.d("MaininformationActivity", "Datos cargados del archivo: " + userJson.toString());
+
 
                 // Set the EditText fields with the loaded data
                 editName.setText(userJson.optString("name", ""));
@@ -176,10 +205,25 @@ public class MaininformationActivity extends AppCompatActivity {
                 editGender.setText(userJson.optString("gender", ""));
                 editWeight.setText(userJson.optString("weight", ""));
                 editHeight.setText(userJson.optString("height", ""));
-                editInfertility.setText(userJson.optString("infertility", ""));
-                editFamilyHistory.setText(userJson.optString("family_history", ""));
+                String infertility = userJson.optString("infertility", "");
+                if (infertility.equalsIgnoreCase("Yes")) {
+                    radioGroupInfertility.check(R.id.radioInfertilityYes);
+                } else if (infertility.equalsIgnoreCase("No")) {
+                    radioGroupInfertility.check(R.id.radioInfertilityNo);
+                }
+                String familyHistory = userJson.optString("family_history", "");
+                if (familyHistory.equalsIgnoreCase("Yes")) {
+                    radioGroupFamilyHistory.check(R.id.radioFamilyHistoryYes);
+                } else if (familyHistory.equalsIgnoreCase("No")) {
+                    radioGroupFamilyHistory.check(R.id.radioFamilyHistoryNo);
+                }
                 editAgeAtMenarche.setText(userJson.optString("age_at_menarche", ""));
-                editNulliparity.setText(userJson.optString("nulliparity", ""));
+                String nulliparity = userJson.optString("nulliparity", "");
+                if (nulliparity.equalsIgnoreCase("Yes")) {
+                    radioGroupNulliparity.check(R.id.radioNulliparityYes);
+                } else if (nulliparity.equalsIgnoreCase("No")) {
+                    radioGroupNulliparity.check(R.id.radioNulliparityNo);
+                }
 
                 Log.d("MaininformationActivity", "User data loaded successfully for DNI: " + dni);
             } catch (Exception e) {

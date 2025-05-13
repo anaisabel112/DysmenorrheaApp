@@ -20,10 +20,10 @@
     <string name="gender">性别</string>
     <string name="weight">体重</string>
     <string name="height">身高</string>
-    <string name="infertility">不育：是或否</string>
-    <string name="Familyhistoryofdysmenorrhea">痛经家族史：是或否</string>
+    <string name="infertility">不育</string>
+    <string name="Familyhistoryofdysmenorrhea">痛经家族史</string>
     <string name="ageatmenarche">初潮年龄</string>
-    <string name="Nulliparity">初产：是或否</string>
+    <string name="Nulliparity">初产</string>
     <string name="editinformation">编辑信息</string>
     <string name="addmenstrualcycle">添加月经周期</string>
     <string name="menstrualcycles">月经周期：</string>
@@ -64,6 +64,8 @@
     <string name="userexists">此DNI的用户已存在</string>
     <string name="userregistered">用户注册成功</string>
     <string name="usererror">注册错误</string>
+    <string name="Yes">是</string>
+    <string name="No">不是</string>
 
 
 
