@@ -128,10 +128,10 @@ public class MaininformationActivity extends AppCompatActivity {
             userJson.put("gender", editGender.getText().toString().trim());
             userJson.put("weight", editWeight.getText().toString().trim());
             userJson.put("height", editHeight.getText().toString().trim());
-            userJson.put("infertility", infertility);
-            userJson.put("family_history", familyHistory);
+            userJson.put("infertility", radioGroupInfertility.getCheckedRadioButtonId() == R.id.radioInfertilityYes ? "Yes" : "No");
+            userJson.put("family_history", radioGroupFamilyHistory.getCheckedRadioButtonId() == R.id.radioFamilyHistoryYes ? "Yes" : "No");
             userJson.put("age_at_menarche", editAgeAtMenarche.getText().toString().trim());
-            userJson.put("nulliparity", nulliparity);
+            userJson.put("nulliparity", radioGroupNulliparity.getCheckedRadioButtonId() == R.id.radioNulliparityYes ? "Yes" : "No");
 
             // Remove incorrect or outdated field names
             userJson.remove("family history");
