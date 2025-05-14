@@ -10,7 +10,7 @@
     android:orientation="vertical"
     tools:context=".StartActivity">
 
-    <!-- Ajusta este valor a tu preferencia -->
+
 
     <TextView
         android:id="@+id/welcomeText"

@@ -53,7 +53,6 @@
                     android:textColor="#FFFFFF"
                     app:cornerRadius="20dp" />
 
-                <!-- Botón de Return con mismo diseño -->
                 <Button
                     android:id="@+id/btnreturn"
                     android:layout_width="match_parent"
@@ -67,7 +66,6 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Contenedor para los botones dinámicos -->
         <LinearLayout
             android:id="@+id/layoutButtons"
             android:layout_width="match_parent"

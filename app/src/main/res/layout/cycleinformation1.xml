@@ -16,7 +16,7 @@
         android:gravity="center"
         >
 
-        <!-- Texto de instrucciones -->
+
         <TextView
             android:id="@+id/Text"
             android:layout_width="match_parent"
@@ -46,7 +46,6 @@
                 android:background="@color/white">
 
 
-                <!-- Campos de entrada -->
 
                 <TextView
                     android:id="@+id/textView"
@@ -422,7 +421,7 @@
                     android:textColor="@color/black"
                     android:textColorHint="@color/cardview_dark_background" />
 
-                <!-- Botón de continuar -->
+
                 <Button
                     android:id="@+id/btnsave"
                     android:layout_width="match_parent"

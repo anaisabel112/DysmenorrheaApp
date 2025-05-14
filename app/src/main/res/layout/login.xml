@@ -28,7 +28,7 @@
             android:padding="24dp"
             android:background="@color/white">
 
-            <!-- Texto adicional: Log in with your username -->
+
 
 
             <TextView
@@ -96,7 +96,6 @@
 
     </androidx.cardview.widget.CardView>
 
-    <!-- Texto adicional: Enter your details to continue -->
 
     <TextView
         android:layout_width="match_parent"
